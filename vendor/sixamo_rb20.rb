@@ -806,8 +806,11 @@ if $0 == __FILE__
 
 	elsif opt[:m]
 		sixamo = Sixamo.new(ARGV[0])
-		str = ARGV[1]
-		sixamo.memorize(str)
+		if ARGV[1]
+			str = ARGV[1]
+			sixamo.memorize(str)
+		end
+
 		res = sixamo.talk
 		puts res
 
